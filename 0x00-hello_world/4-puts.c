@@ -4,7 +4,6 @@
 int main()
 {
   char str[60];
-  strcpy(str, "\"Programming is like building a multilingual puzzle/n");
-  puts(str);
+  puts("\"Programming is like building a multilingual puzzle\n");
   return 0;
  }

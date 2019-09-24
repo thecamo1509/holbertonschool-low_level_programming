@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * This will create the alphabet in lowercase from a to z
+ * print_alphabet - function to create the alphabet in lowercase from a to z
  *
  * Return: Always 0.
  */

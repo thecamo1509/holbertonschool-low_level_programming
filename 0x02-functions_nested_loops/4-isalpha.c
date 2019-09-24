@@ -5,7 +5,7 @@
  * Return: 1 if it is letter
  */
 int _isalpha(int c)
-{	
+{
 	int ans;
 
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))

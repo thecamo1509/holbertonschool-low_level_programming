@@ -1,9 +1,11 @@
 #include "holberton.h"
 
+
 /**
 * main - tests function that checks if the function works with 0
 * Return: 0
 */
+
 
 int main(void)
 {

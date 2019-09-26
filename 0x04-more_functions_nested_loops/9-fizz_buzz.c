@@ -20,17 +20,20 @@ int main(void)
 		else if (num == buzz && num != fizz)
 		{
 		buzz = buzz + 5;
-		printf("Buzz ");
+			if (num == 100)
+			{
+			printf("Buzz");
+			}
+			else
+			{
+			printf("Buzz ");
+			}
 		}
 		else if (num == fizz && num == buzz)
 		{
 		fizz = fizz + 3;
 		buzz = buzz + 5;
 		printf("FizzBuzz ");
-		}
-		else if (num == 100)
-		{
-		printf("Buzz");
 		}
 		else
 		{

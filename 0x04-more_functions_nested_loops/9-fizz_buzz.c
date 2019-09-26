@@ -28,6 +28,10 @@ int main(void)
 		buzz = buzz + 5;
 		printf("FizzBuzz ");
 		}
+		else if (num == 100)
+		{
+		printf("Buzz");
+		}
 		else
 		{
 		printf("%d ", num);

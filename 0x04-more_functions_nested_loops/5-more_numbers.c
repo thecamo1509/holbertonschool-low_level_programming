@@ -3,8 +3,6 @@
 * more_numbers - is a function to print numbers from 0 to 14
 * Return: no return
 */
-int printnum(int num);
-
 void more_numbers(void)
 {
 	int num;

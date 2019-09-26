@@ -10,7 +10,7 @@ int main(void)
 	int fizz = 3;
 	int buzz = 5;
 
-	for (num = 0; num <= 100; num++)
+	for (num = 1; num <= 100; num++)
 	{
 		if (num == fizz && num != buzz)
 		{

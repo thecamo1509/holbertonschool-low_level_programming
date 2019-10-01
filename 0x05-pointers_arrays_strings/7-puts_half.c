@@ -18,7 +18,7 @@ void puts_half(char *str)
 		i++;
 	}
 
-mitad = i / 2;
+	mitad = i / 2;
 
 	if (i % 2 != 0)
 	{

@@ -1,4 +1,4 @@
-#include "holberton.h"
+iinclude "holberton.h"
 /**
 * _strncpy - This function will copy a string
 * @dest: Destiny string
@@ -10,7 +10,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
 
-	while (dest[i] != '\0' && i < n)
+	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;

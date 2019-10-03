@@ -1,4 +1,4 @@
-iinclude "holberton.h"
+#include "holberton.h"
 /**
 * _strncpy - This function will copy a string
 * @dest: Destiny string

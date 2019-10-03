@@ -3,6 +3,7 @@
  * _strcpy - Function to copy strings
  * @dest: Destiny
  * @src: Source
+ * Return: will return the destiny
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -14,5 +15,5 @@ char *_strcpy(char *dest, char *src)
 		p++;
 	}
 	dest[p] = '\0';
-		return(dest);
+		return (dest);
 }

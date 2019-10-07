@@ -25,7 +25,7 @@ char *_strchr(char *s, char c)
 		}
 		else if (o == i)
 		{
-			s ='\0';
+			s = '\0';
 		}
 		o++;
 	}

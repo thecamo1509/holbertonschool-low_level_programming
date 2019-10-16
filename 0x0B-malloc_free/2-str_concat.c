@@ -25,7 +25,7 @@ return (a - s);
 
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, o;
+	int i, j;
 	int tam1, tam2;
 	char *dest;
 
@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	tam1 = _strlen(s1);
 	tam2 = _strlen(s2);
 
-	dest = malloc((tam1 + tam2));
+	dest = malloc((tam1 + tam2 + 1));
 
 	if (dest == NULL)
 	{
@@ -53,10 +53,9 @@ char *str_concat(char *s1, char *s2)
 		{
 			dest[i] = s1[i];
 		}
-		o = i;
 		for (j = 0; j <= tam2; j++)
 		{
-			dest[o + j] = s2[j];
+			dest[i + j] = s2[j];
 		}
 	}
 	return (dest);

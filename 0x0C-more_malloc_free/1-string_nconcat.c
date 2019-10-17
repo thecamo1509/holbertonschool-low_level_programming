@@ -13,7 +13,7 @@ unsigned int _strlen(char *s)
 
 	while (*a)
 	{
-	++a;
+	a++;
 	}
 return (a - s);
 }
@@ -41,15 +41,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	tam1 = _strlen(s1);
 	tam2 = 0;
-	while (tam2 < n)
-	{
-		tam2++;
-	}
-	if (n > tam2)
+	if (n >= _strlen(s2))
 	{
 		tam2 = _strlen(s2);
 	}
-	p = malloc(sizeof(char) * (tam1 + tam2 + 1));
+	else
+	{
+		while (tam2 < n)
+		{
+			tam2++;
+		}
+	}
+	
+	p = malloc(sizeof(char) * (tam1 + tam2));
 	if (p == NULL)
 	{
 		return (NULL);

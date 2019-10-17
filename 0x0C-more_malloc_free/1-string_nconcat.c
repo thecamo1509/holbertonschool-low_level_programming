@@ -42,17 +42,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	tam1 = _strlen(s1);
 	tam2 = 0;
 	if (n >= _strlen(s2))
-	{
 		tam2 = _strlen(s2);
-	}
 	else
 	{
 		while (tam2 < n)
-		{
 			tam2++;
-		}
 	}
-	
 	p = malloc(sizeof(char) * (tam1 + tam2));
 	if (p == NULL)
 	{

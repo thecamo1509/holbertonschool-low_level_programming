@@ -41,7 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	tam1 = _strlen(s1);
 	tam2 = 0;
-	while (tam2 <= n)
+	while (tam2 < n)
 	{
 		tam2++;
 	}

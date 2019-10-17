@@ -7,7 +7,7 @@
 * Return: Will return the number of char
 */
 
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
 	char *a = s;
 
@@ -44,6 +44,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (tam2 <= n)
 	{
 		tam2++;
+	}
+	if (n > tam2)
+	{
+		tam2 = _strlen(s2);
 	}
 	p = malloc(sizeof(char) * (tam1 + tam2 + 1));
 	if (p == NULL)

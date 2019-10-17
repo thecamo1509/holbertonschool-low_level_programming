@@ -9,13 +9,13 @@
 
 unsigned int _strlen(char *s)
 {
-	char *a = s;
+	unsigned int a = 0;
 
-	while (*a != '\0')
+	while (s[a] != '\0')
 	{
 	a++;
 	}
-return (a - s);
+return (a);
 }
 /**
  * string_nconcat - Concatenates two strings
@@ -40,29 +40,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	tam1 = _strlen(s1);
-	tam2 = 0;
-	if (n >= _strlen(s2))
-		tam2 = _strlen(s2);
-	else
+	tam2 = _strlen(s2);
+	if (n >= tam2)
 	{
-		tam2 = n;
+		n = _strlen(s2);
 	}
-	p = malloc(sizeof(char) * (tam1 + tam2));
+	p = malloc(sizeof(char) * (tam1 + n) + 1);
 	if (p == NULL)
 	{
 		return (NULL);
 	}
-	else
-	{
 		for (i = 0; i < tam1; i++)
 		{
 			p[i] = s1[i];
 		}
-		for (j = 0; j < tam2; j++)
+		for (j = 0; j < n; j++)
 		{
 			p[i + j] = s2[j];
 		}
 		p[i + j] = '\0';
-	}
 	return (p);
 }

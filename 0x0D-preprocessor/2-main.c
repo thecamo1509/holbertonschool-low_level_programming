@@ -2,11 +2,10 @@
 
 /**
  * main - will print the name of the file
- * 
  * Return: Always 0;
  */
 
-int main (void)
+int main(void)
 {
 	printf("%s \n", __FILE__);
 

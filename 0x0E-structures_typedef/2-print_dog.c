@@ -13,7 +13,7 @@ void print_dog(struct dog *d)
 		char *nombre;
 		char *dueno;
 
-		nombre = ((*d).name != NULL ? (*d).nam : "(nil)");
+		nombre = ((*d).name != NULL ? (*d).name : "(nil)");
 		dueno = ((*d).owner != NULL ? (*d).owner : "(nil)");
 
 			printf("Name: %s\n", nombre);

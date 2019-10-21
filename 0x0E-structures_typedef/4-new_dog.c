@@ -5,11 +5,13 @@
  * @name: Dog's name
  * @age: Dog's age
  * @owner: Dog's owner
+ * Return: pointr
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ptr;
+
 	ptr = malloc(sizeof(dog_t));
 	if (ptr == NULL)
 		return (NULL);

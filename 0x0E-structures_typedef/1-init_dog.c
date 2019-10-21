@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
  * init_dog - Function to initialize structure
  * @d: This is a pointer
@@ -10,7 +11,10 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+		if (d != NULL)
+		{
 		d->name = name;
 		d->age = age;
 		d->owner = owner;
+		}
 }

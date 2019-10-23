@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stdlib.h>
 /**
  * array_iterator - This will execute a function given as a parameter
  * @size: size of the array
@@ -10,7 +11,7 @@
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	if (array == NULL || size <= 0 || action == NULL)
-		return;
+	return;
 
 	size_t i = 0;
 

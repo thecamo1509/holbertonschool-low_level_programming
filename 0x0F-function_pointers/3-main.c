@@ -35,4 +35,5 @@ int main(int argc, char *argv[])
 	int ans = get_op_func(argv[2])(a, b);
 
 	printf("%d\n", ans);
+	return(0);
 }

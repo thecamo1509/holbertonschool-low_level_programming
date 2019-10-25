@@ -8,11 +8,7 @@
  */
 int op_add(int a, int b)
 {
-	int ans;
-
-	ans = (a) + (b);
-
-	return (ans);
+	return (a + b);
 }
 /**
  * op_sub - Substraction of the parameters
@@ -22,11 +18,7 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-	int ans;
-
-	ans = (a) - (b);
-
-	return (ans);
+	return (a - b);
 }
 /**
  * op_mul - Multiplying of the parameters
@@ -36,11 +28,7 @@ int op_sub(int a, int b)
  */
 int op_mul(int a, int b)
 {
-	int ans;
-
-	ans = (a) * (b);
-
-	return (ans);
+	return (a * b);
 }
 /**
  * op_div - Division of the parameters
@@ -50,11 +38,7 @@ int op_mul(int a, int b)
  */
 int op_div(int a, int b)
 {
-	int ans;
-
-	ans = (a) / (b);
-
-	return (ans);
+	return (a / b);
 }
 /**
  * op_mod - Returns the mod of the parameters
@@ -64,9 +48,5 @@ int op_div(int a, int b)
  */
 int op_mod(int a, int b)
 {
-	int ans;
-
-	ans = (a) % (b);
-
-	return (ans);
+	return (a % b);
 }

@@ -7,7 +7,8 @@
 
 void print_all(const char * const format, ...)
 {
-	int i, k, a;
+	int i;
+	int k;
 	double j;
 	char *s;
 	va_list list;
@@ -16,7 +17,6 @@ void print_all(const char * const format, ...)
 	va_start(list, format);
 	while (format[k] != '\0')
 	{
-		a = 1;
 		switch (format[k])
 		{
 		case 'c':
@@ -39,11 +39,9 @@ void print_all(const char * const format, ...)
 			}
 			printf("%s", s);
 			break;
-			default:
-				a = 0;
-				break;
 		}
-		if ((a && format[k] && format[k + 1]))
+		if ((format[k] == 'c' || format[k] == 'i' ||
+		format[k] == 'f' || format[k] == 's') && format[k + 1] != '\0')
 			printf(", ");
 		k++;
 	}

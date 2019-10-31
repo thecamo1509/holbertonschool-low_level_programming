@@ -1,12 +1,17 @@
 #include "lists.h"
 
+/**
+ * print_list - Prints elements of a list
+ * @h: Single linked list
+ * Return: Will return the number of elements.
+ */
+
 size_t print_list(const list_t *h)
 {
 	size_t i = 0;
 
 	while (h != NULL)
 	{
-	
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
 		else

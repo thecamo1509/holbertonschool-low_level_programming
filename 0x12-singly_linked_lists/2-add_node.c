@@ -15,10 +15,12 @@ list_t *add_node(list_t **head, const char *str)
 	{
 	return (NULL);
 	}
-	for (i = 0; str[i] != '\0'; i++)
-
-	var->len = i;
+	while (str[i] !0 '\0')
+	{
+		i++;
+	}
 	var->str = strdup(str);
+	var->len = i;
 	var->next = *head;
 
 	*head = var;

@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
- * listint_len - This function will return number of elements
+ * add_nodeint - This function will return the address of the element
  * @head: This is the list
  * @n: This is the n
  * Return: Will return the number of nodes

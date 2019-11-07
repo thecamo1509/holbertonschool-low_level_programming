@@ -37,46 +37,43 @@ return (i);
 }
 /**
  * _atoi - Converts char to unsigned int
- * s - char to convert
+ * @s: char to convert
  * Return: char converted to number
  */
 
 int _atoi(const char *s)
 {
-    int b, c, signo, f;
-    unsigned int e;
-    b = 0;
-    signo = 1;
-    e = 0;
-    f = 0;
-    while (s[b] != '\0')
-    {
-        c = s[b];
-        if (c == 45)
-        {
-            signo = signo * (-1);
-        }
-        if (c >= 48 && c <= 57)
-        {
-            c = s[b] - 48;
-            if (e == 0)
-            {
-                e = c;
-            }
-            else
-            {
-                e = (e * 10) + c;
-                ++f;
-            }
-        }
-        else if (f > 0)
-        {
-            break;
-        }
-        ++b;
-    }
-    e = e * signo;
-    return (e);
+	int b = 0, c, signo = 0, f = 0;
+	unsigned int e = 0;
+
+	while (s[b] != '\0')
+	{
+		c = s[b];
+		if (c == 45)
+		{
+			signo = signo * (-1);
+		}
+		if (c >= 48 && c <= 57)
+		{
+			c = s[b] - 48;
+			if (e == 0)
+			{
+			e = c;
+			}
+			else
+			{
+			e = (e * 10) + c;
+			++f;
+			}
+		}
+		else if (f > 0)
+		{
+			break;
+		}
+	++b;
+	}
+	e = e * signo;
+	return (e);
 }
 /**
  * binary_to_uint - This function converst binary to an unsigned int
@@ -86,7 +83,7 @@ int _atoi(const char *s)
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned n = 0, num, sum = 0, tam, pos;
+	unsigned int n = 0, num, sum = 0, tam, pos;
 
 	if (b == NULL)
 	return (0);
@@ -97,7 +94,6 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[pos] != '1' && b[pos] != '0')
 		return (0);
-	
 		if (b[pos] == '1')
 		{
 			num = _pow_recursion(2, n);

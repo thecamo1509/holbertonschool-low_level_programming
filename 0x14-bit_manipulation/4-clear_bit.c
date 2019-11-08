@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * set_bit - Add a bit at an Index
+ * clear_bit - Clear a bit at index
  * @n: The number
  * @index: The index
  * Return: the converted number or 0 if it fails

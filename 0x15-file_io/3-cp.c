@@ -34,4 +34,5 @@ int main(int argc, char **argv)
 	closing = close(fdtmp);
 	if (closing == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdtmp), exit(100);
+	return (0);
 }

@@ -25,7 +25,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
  * delete_dnodeint_at_index - Delete node at a specific index
  * @head: Header to the first node
  * @index: Index to go through
- * Return: The address of the desired node
+ * Return: 1 if success or -1 if it fails
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {

@@ -8,7 +8,7 @@ unsigned int longi(dlistint_t *head)
 {
 	unsigned int i = 0;
 
-	while (head)
+	while (head->next)
 	{
 		head = head->next;
 		i++;

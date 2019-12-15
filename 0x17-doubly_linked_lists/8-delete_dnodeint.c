@@ -1,5 +1,21 @@
 #include "lists.h"
 /**
+ * longi - Get list long
+ * @head: Header to the first node
+ * Return: The long of the list
+ */
+unsigned int longi(dlistint_t *head)
+{
+	unsigned int i = 0;
+
+	while (head)
+	{
+		head = head->next;
+		i++;
+	}
+	return (i);
+}
+/**
  * get_dnodeint_at_index - Get node at specific index
  * @head: Header to the first node
  * @index: Index to go through
@@ -32,41 +48,41 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *temp = *head;
 	unsigned int i = 0;
 
-	if (head == NULL)
+	if (head == NULL || *head == NULL)
 		return (-1);
 	if (temp)
 	{
-		if (temp->next == NULL && temp->prev == NULL)
+		if (temp->next == NULL && index == 0)
 		{
 			free(*head);
 			*head = NULL;
-			return (1);
+			return (-1);
 		}
-		if (temp->next != NULL && temp->prev == NULL && index == 0)
+		i = longi(temp);
+		if (index > i)
+			return (-1);
+		if (index == 0)
 		{
-			temp = temp->next;
-			free(temp->prev);
-			temp->prev = NULL;
-			*head = temp;
+			temp->next->prev = NULL;
+			*head = temp->next;
+			free(temp);
 			return (1);
-		}
-		while (temp)
-		{
-			temp = temp->next;
-			i++;
 		}
 		if (i == index)
 		{
 			temp = get_dnodeint_at_index(*head, index);
 			temp->prev->next = NULL;
 			free(temp);
+			temp = NULL;
 			return (1);
 		}
 		temp = get_dnodeint_at_index(*head, index);
 		temp->prev->next = temp->next;
 		temp->next->prev = temp->prev;
+		temp->prev = NULL;
+		temp->next = NULL;
 		free(temp);
-		return (1);
+		temp = NULL;
 	}
-	return (-1);
+	return (1);
 }

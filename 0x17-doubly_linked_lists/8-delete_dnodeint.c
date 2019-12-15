@@ -50,39 +50,36 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	if (head == NULL || *head == NULL)
 		return (-1);
-	if (temp)
+	if (temp->next == NULL && index == 0)
 	{
-		if (temp->next == NULL && index == 0)
-		{
-			free(*head);
-			*head = NULL;
-			return (-1);
-		}
-		i = longi(temp);
-		if (index > i)
-			return (-1);
-		if (index == 0)
-		{
-			temp->next->prev = NULL;
-			*head = temp->next;
-			free(temp);
-			return (1);
-		}
-		if (i == index)
-		{
-			temp = get_dnodeint_at_index(*head, index);
-			temp->prev->next = NULL;
-			free(temp);
-			temp = NULL;
-			return (1);
-		}
+		free(*head);
+		*head = NULL;
+		return (-1);
+	}
+	i = longi(temp);
+	if (index > i)
+		return (-1);
+	if (index == 0)
+	{
+		temp->next->prev = NULL;
+		*head = temp->next;
+		free(temp);
+		return (1);
+	}
+	if (i == index)
+	{
 		temp = get_dnodeint_at_index(*head, index);
-		temp->prev->next = temp->next;
-		temp->next->prev = temp->prev;
-		temp->prev = NULL;
-		temp->next = NULL;
+		temp->prev->next = NULL;
 		free(temp);
 		temp = NULL;
+		return (1);
 	}
+	temp = get_dnodeint_at_index(*head, index);
+	temp->prev->next = temp->next;
+	temp->next->prev = temp->prev;
+	temp->prev = NULL;
+	temp->next = NULL;
+	free(temp);
+	temp = NULL;
 	return (1);
 }

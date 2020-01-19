@@ -24,7 +24,7 @@ void hash_table_print(const hash_table_t *ht)
 					printf(", ");
 				else
 					flag = 1;
-				printf("\'%s\': \'%s\'", var->key, var->value);
+				printf("\'%s\': \'%s", var->key, var->value);
 				printf("\'");
 			}
 		}

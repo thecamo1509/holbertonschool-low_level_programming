@@ -1,0 +1,7 @@
+#This rule will compile the c files necessary
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)

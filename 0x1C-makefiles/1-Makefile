@@ -1,0 +1,5 @@
+#This rule will compile the c files necessary
+CC = gcc
+SRC = main.c holberton.c
+all: main.c m.h holberton.c
+	$(CC) $(SRC) -o holberton

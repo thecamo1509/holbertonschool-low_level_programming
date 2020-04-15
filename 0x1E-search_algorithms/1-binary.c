@@ -1,4 +1,4 @@
-#include "search_algos.h"	
+#include "search_algos.h"
 /**
  * binary_search - Function that finds a value in an array
  * @array: is a pointer to the first element of the array to search in
